@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff6f61, #de6262);
+    color: #fff;
+    overflow: auto;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+    margin: auto;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ff6f61;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #ff6f61;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.candles {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.candle {
+    width: 10px;
+    height: 60px;
+    background: #fff;
+    margin: 0 5px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.flame {
+    width: 10px;
+    height: 20px;
+    background: radial-gradient(circle, #ff0, #ffa500, #ff4500);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-radius: 50%;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle, #667BC6, #de6262);
+    border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
+    margin: 0 10px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.balloon1 {
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    animation-delay: 1s;
+}
+
+.balloon3 {
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.birthday-image {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .candle {
+        width: 8px;
+        height: 50px;
+    }
+
+    .flame {
+        width: 8px;
+        height: 16px;
+        top: -16px;
+    }
+
+    .balloon {
+        width: 40px;
+        height: 60px;
+    }
+
+    .birthday-image {
+        max-width: 280px;
+    }
+}
